@@ -24,3 +24,5 @@ It's kinda cool to watch it in action.
 * You can see clumps of 4 cells static for a while. 
 * You can see blinker patterns. 
 * You can see parts of the world die off.
+
+It is quite a bit of fun to watch a board of size 50 or more in action.
