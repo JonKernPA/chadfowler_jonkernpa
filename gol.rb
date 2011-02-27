@@ -199,7 +199,7 @@ class GolTest < Test::Unit::TestCase
         [1, 1, 1, 0, 1, 1, 1, 0]
         ]
         
-        @board = Board.new(10).board
+        @board = Board.new(25).board
     end
     should "simulate for a while" do
       # STDERR.puts print_board_fancy(@board)
