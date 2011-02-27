@@ -1,6 +1,22 @@
 require 'rubygems'
 require 'test/unit'
 require 'shoulda'
+
+class Board
+  attr_reader :board
+
+  def initialize(length_of_side=10)
+    @board = initialize_row(length_of_side)
+    @board.map! {initialize_row(length_of_side)}
+  end
+  
+  def initialize_row(size=10)
+    row = Array.new(size)
+    row.fill {|e| rand(2)}
+  end
+
+end
+
 class GolTest < Test::Unit::TestCase
   def print_board(board)
     board.map do |row|
@@ -161,9 +177,13 @@ class GolTest < Test::Unit::TestCase
   
   def print_board_fancy(board)
     STDERR.print "\e[2J\e[f" # Magic to clear screen (possibly works only in *nix)
-    board.map do |row|
-      "|" + row.collect {|x| x == 1 ? "#" : " "}.join(' ') + "|"
+    h_border ="\n|" + "--"*(board[0].size) + "|\n"
+    text = h_border
+    text += board.map do |row|
+      "|" + row.collect {|x| x == 1 ? "#" : " "}.join(' ') + " |"
     end.join("\n")
+    text += h_border
+    text
   end
   
   context "a partially alive board" do
@@ -178,6 +198,8 @@ class GolTest < Test::Unit::TestCase
         [1, 1, 0, 0, 1, 1, 0, 0],
         [1, 1, 1, 0, 1, 1, 1, 0]
         ]
+        
+        @board = Board.new(10).board
     end
     should "simulate for a while" do
       # STDERR.puts print_board_fancy(@board)
