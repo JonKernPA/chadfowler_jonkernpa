@@ -12,3 +12,15 @@ We succeeded!
 I made a minor tweak to increase the board size and make the printing "fancier" when running from the terminal.
 
 *SHIP IT!*
+
+VIDEOS
+======
+You'll want to check out the videos, or simply run gol.rb yourself. 
+
+(http://www.youtube.com/watch?v=vmnaOYcpPKc)
+
+It's kinda cool to watch it in action.
+
+* You can see clumps of 4 cells static for a while. 
+* You can see blinker patterns. 
+* You can see parts of the world die off.
