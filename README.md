@@ -17,7 +17,7 @@ VIDEOS
 ======
 You'll want to check out the videos, or simply run gol.rb yourself. 
 
-(http://www.youtube.com/watch?v=vmnaOYcpPKc)
+[Sample Simulation](http://www.youtube.com/watch?v=vmnaOYcpPKc)
 
 It's kinda cool to watch it in action.
 
