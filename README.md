@@ -3,9 +3,9 @@ Game of Life
 
 This effort was the final pairing we did for the Cleveland CodeRetreat on the @Leandog boat o 16 January, 2011.
 
-I wanted to work with @chadfowler -- to absorb ruyisms.
+I wanted to work with @chadfowler -- to absorb rubyisms.
 
-I also was hell-bent on getting the stupid simulation working.
+I also was hell-bent on getting the stupid simulation working. Tired of getting close on different exploratory fronts earlier in the day. Wanted to *brute force* a solution :-)
 
 We succeeded!
 
