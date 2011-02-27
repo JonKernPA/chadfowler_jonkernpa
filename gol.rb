@@ -199,17 +199,15 @@ class GolTest < Test::Unit::TestCase
         [1, 1, 1, 0, 1, 1, 1, 0]
         ]
         
-        @board = Board.new(25).board
+        @board = Board.new(50).board
     end
     should "simulate for a while" do
-      # STDERR.puts print_board_fancy(@board)
       loop do
         STDERR.puts print_board_fancy(@board)
         new_board = generation(@board)
         break if new_board == @board
         @board = new_board
-        sleep 0.5
-        # STDERR.print "\e[2J\e[f" # Magic to clear screen (possibly works only in *nix)
+        # sleep 0.1
       end
     end    
   end
