@@ -6,8 +6,18 @@ class Board
   attr_reader :board
 
   def initialize(length_of_side=10)
-    @board = initialize_row(length_of_side)
-    @board.map! {initialize_row(length_of_side)}
+    pass_count = 0
+    @board = []
+    unless live_count > (length_of_side*length_of_side/3) || pass_count > 5
+      pass_count += 1
+      @board = initialize_row(length_of_side)
+      @board.map! {initialize_row(length_of_side)}
+      puts "Initialized a #{length_of_side}x#{length_of_side} board with #{live_count} live cells"
+    end
+  end
+  
+  def live_count
+    sum = @board.flatten.inject(0) {|sum, cell| sum + cell}
   end
   
   def initialize_row(size=10)
